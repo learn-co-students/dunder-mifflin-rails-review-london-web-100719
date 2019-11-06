@@ -1,0 +1,18 @@
+<h1>Employee name: <%= @employee.to_s %></h1>
+
+<img src="<%= @employee.img_url %>" height="200">
+
+<p>My alias is <%= @employee.alias %>.</p>
+<p>I work as <%= @employee.title %> in <%= @employee.office %>.</p>
+
+
+
+<% if @employee.dog %>
+    My dog is named <%= @employee.dog.name %>.
+<% else %>
+    I have no dog.
+<% end %>
+<br>
+<br>
+<%= link_to "Update this employee", edit_employee_path%><br>
+<%= link_to "Back to all employees", employees_path %>

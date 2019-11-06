@@ -1,0 +1,16 @@
+<h1>Dog name: <%= @dog.name %></h1>
+
+<p>My breed is <%= @dog.breed %>, and my age is <%= @dog.age %>.</p>
+
+<p>Here is my list of owner(s):</p>
+<ul>
+    <% if @dog.employees.size > 0 %>
+        <% @dog.employees.each do |employee| %>
+            <li><%= employee.to_s %></li>
+        <% end %>
+    <% else %>
+        I have no owners
+    <% end %>
+</ul>
+<br><br>
+<%= link_to "Back to all dogs", dogs_path %>
