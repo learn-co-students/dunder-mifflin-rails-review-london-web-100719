@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <p><%= link_to "Employees", employees_path %> | <%= link_to "Dogs", dogs_path %></p>
+
+   <p > <%= flash[:errors] %> </p>
+
     <%= yield %>
   </body>
 </html>
