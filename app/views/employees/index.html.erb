@@ -1,0 +1,6 @@
+<h1>Employees Index 👨🏻‍🔧</h1>
+<ul>
+  <% @employees.each do |emp| %>
+    <li><%= link_to emp.name, emp %></li>
+  <%end%>
+<ul>
