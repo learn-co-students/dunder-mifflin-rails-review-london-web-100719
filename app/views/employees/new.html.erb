@@ -1,0 +1,15 @@
+
+<table>
+<%= form_for @employee do |f| %>
+
+<tr><td>First Name</td><td> <%= f.text_field :first_name %></td></tr>
+<tr><td>Last Name</td><td> <%= f.text_field :last_name %></td></tr>
+<tr><td>Alias</td><td> <%= f.text_field :alias %></td></tr>
+<tr><td>Title</td><td> <%= f.text_field :title %></td></tr>
+<tr><td>Image </td><td><%= f.text_field :img_url%></td></tr>
+<tr><td>Dog </td><td><%= f.collection_select :dog_id, @dogs, :id, :name  %></td></tr>
+<tr><td></td><td></td><td>
+<tr><td></td><td><%= f.submit "Create Employee" %></td> </tr>
+</table>
+
+<% end %>

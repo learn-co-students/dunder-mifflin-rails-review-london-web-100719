@@ -1,0 +1,11 @@
+<h1>
+<%= "Meet #{@employee.first_name} #{@employee.last_name}: alias #{@employee.alias} "%>
+</h1>
+<%= image_tag @employee.img_url, style: "height: 200px"%>
+<p>
+<%= "This employee´s title is #{@employee.title} and they work in the #{@employee.office} office."%></p>
+<p><%="Their dog is #{@employee.dog.name}. "%></p>
+
+
+
+
