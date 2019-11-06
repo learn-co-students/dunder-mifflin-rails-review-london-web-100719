@@ -1,0 +1,10 @@
+<h1> These are the employees mate </h1>
+
+<ul>
+    <% @employees.each do |employee| %>
+        <p> <%= link_to employee.first_name, employee %> </p>
+    <% end %>
+</ul>
+
+
+<h2> <%= link_to "create a new employee", new_employee_path%> </h2>
