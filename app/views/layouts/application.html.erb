@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% if flash[:errors]%>
+    <% flash[:errors].each do |error| %>
+        <h4><%= error %></h4>
+        <% end%>
+    <% end%>
     <%= yield %>
   </body>
 </html>
