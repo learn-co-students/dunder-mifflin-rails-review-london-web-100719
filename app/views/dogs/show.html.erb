@@ -1,0 +1,13 @@
+<h1> Here is your dog's info </h1>
+
+<%= @dog.name %>
+<%= @dog.breed %>
+
+<h3> Dog's owner: </h3>
+<ul>
+    <% @employees.map do |employee|%>
+        <% if employee.dog.name == @dog.name %>
+            <li> <%= employee.first_name %> </li>
+        <%end%>
+    <%end%>
+</ul>
